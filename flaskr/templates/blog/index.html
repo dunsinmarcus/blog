@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <header id="intro" class="container-fluid text-center mt-5">
+      <div class="heading-inner pt-5">
+          <h1 class="intro-heading display-3 pt-5"><strong>{% block title %}Sell Courses{% endblock %} and Community Memberships</strong></h1>
+
+          <p class="paragraph1 ">We made it so easy, even a 10 year old could do it.</p>
+              
+          <div class="row pt-4">
+              <div class="col"></div>
+              <a role="button" href="{{ url_for('auth.register') }}" class="btn btn-lg d-block mt-5 col-8 intro-button">Start Selling</a>
+              <div class="col"></div>
+          </div>
+      </div>
+  </header>
+{% endblock %}
+
+{% block content %}
+  <section id="about" class="text-center">
+    <div class="section1">
+      <div class="container py-5">
+        <h2 class="pb-3">Turn Your Knowledge into Income</h2>
+        <p class="paragraph">Evolve is a platform that makes it super easy for any Nigerian with a smart phone, an internet connection, and some knowledge, to make money by selling courses online.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="container py-5">
+        <h2 class="pb-3">Own Your Customers</h2>
+        <p class="paragraph">You can export a list of email addresses of every customer who's ever bought your course, anytime.</p>
+      </div>
+    </div>
+
+    <div class="section3">
+      <div class="container py-5">
+        <h2 class="pb-3">Zero Start-up Charge</h2>
+        <p class="paragraph">Unlike other platforms, we don't charge upfront package fees, so you don't have to pay a kobo before you start making profit.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="container py-5">
+        <h2 class="pb-3">Receive Payment Easily</h2>
+        <p class="paragraph">When someone buys your course, you get paid directly into your bank account, except you choose otherwise.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container text-center">
+    <p>Evolve &copy; 2023</p>
+  </footer>
+{% endblock %}
