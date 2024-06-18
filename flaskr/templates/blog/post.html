@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1 class="mx-2" style="display: inline;">{% block title %}{{ post['title'] }}{% endblock %}</h1>
+  {% if g.user['id'] == post['author_id'] %}
+    <a class="action mx-2" href="{{ url_for('blog.update', id=post['id']) }}">Edit post</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <p class="mx-2 mt-3">{{ post['body'] }}</p>
+{% endblock %}
